@@ -3,6 +3,7 @@
 #include "OrderedSet.h"
 #include "Duck.h"
 #include "Lane.h"
+#include "Subtask3.h"
 
 using namespace std;
 
@@ -77,7 +78,8 @@ void printLanes(const OrderedSet<Lane>& lanes) {
 
 int main() {
     int N, K;
-    ifstream inputFile("data.txt");
+    // ifstream inputFile("data.txt");
+    ifstream inputFile("../data.txt");
 
     if (!inputFile.is_open()) {
         cerr << "Error while opening file!" << endl;
@@ -91,6 +93,9 @@ int main() {
 
     printDucks(ducks);
     printLanes(lanes);
+
+    // Subtask 3
+    cout << "best time= " << bestTime(ducks, lanes) << endl;
 
     inputFile.close();
 

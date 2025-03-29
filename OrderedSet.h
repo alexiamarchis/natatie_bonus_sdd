@@ -1,6 +1,8 @@
 #ifndef ORDEREDSET_H
 #define ORDEREDSET_H
 
+#include <algorithm>
+
 template <typename T>
 using Comparator = bool(*)(const T&, const T&);
 
