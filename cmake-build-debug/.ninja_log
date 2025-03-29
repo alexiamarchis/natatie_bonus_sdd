@@ -1,0 +1,21 @@
+# ninja log v6
+19	305	7649501776892065	CMakeFiles/natatie_bonus_sdd.dir/Lane.cpp.obj	40145c209e87298a
+9	332	7649501776791975	CMakeFiles/natatie_bonus_sdd.dir/Duck.cpp.obj	543979651d81608
+1106	1301	7649501787767393	natatie_bonus_sdd.exe	1d22c347e7db930
+307	496	7649501779771976	CMakeFiles/natatie_bonus_sdd.dir/OrderedSet.cpp.obj	e88660d724fcb0cf
+29	1096	7649501776981988	CMakeFiles/natatie_bonus_sdd.dir/main.cpp.obj	ffb7f8944332da6a
+13	1904	7649564957718926	CMakeFiles/natatie_bonus_sdd.dir/main.cpp.obj	ffb7f8944332da6a
+17	310	7649565220210272	CMakeFiles/natatie_bonus_sdd.dir/task_2.cpp.obj	79eb311f5c03da74
+9	1181	7649565220133440	CMakeFiles/natatie_bonus_sdd.dir/main.cpp.obj	ffb7f8944332da6a
+1210	1433	7649565232145690	natatie_bonus_sdd.exe	c9c55c4f78c0334a
+9	893	7649565461624685	CMakeFiles/natatie_bonus_sdd.dir/main.cpp.obj	ffb7f8944332da6a
+894	1060	7649565470485316	natatie_bonus_sdd.exe	c9c55c4f78c0334a
+7	1232	7649567080024376	CMakeFiles/natatie_bonus_sdd.dir/main.cpp.obj	ffb7f8944332da6a
+1233	1405	7649567092272811	natatie_bonus_sdd.exe	c9c55c4f78c0334a
+14	163	7649567803092244	CMakeFiles/natatie_bonus_sdd.dir/task_2.cpp.obj	79eb311f5c03da74
+8	819	7649567803037255	CMakeFiles/natatie_bonus_sdd.dir/main.cpp.obj	ffb7f8944332da6a
+819	986	7649567811154100	natatie_bonus_sdd.exe	c9c55c4f78c0334a
+11	179	7649568176885337	CMakeFiles/natatie_bonus_sdd.dir/task_2.cpp.obj	79eb311f5c03da74
+180	407	7649568178564316	natatie_bonus_sdd.exe	c9c55c4f78c0334a
+10	186	7649568803432230	CMakeFiles/natatie_bonus_sdd.dir/task_2.cpp.obj	79eb311f5c03da74
+187	466	7649568805200033	natatie_bonus_sdd.exe	c9c55c4f78c0334a

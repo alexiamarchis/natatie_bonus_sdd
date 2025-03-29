@@ -3,7 +3,7 @@
 #include "OrderedSet.h"
 #include "Duck.h"
 #include "Lane.h"
-
+#include "task_2.h"
 using namespace std;
 
 bool compareDucks(const Duck& d1, const Duck& d2) {
@@ -16,6 +16,19 @@ bool compareLanes(const Lane& l1, const Lane& l2) {
     if (l1.getLength() != l2.getLength())
         return l1.getLength() < l2.getLength();
     return l1.getId() < l2.getId();
+}
+
+bool all_resistances_all_eq(const OrderedSet<Duck>& ds, int N) {
+
+    Duck d=ds.getElem(0);
+    int val=d.getResistance();
+    for (int i=1; i<N; i++ ) {
+        d=ds.getElem(i);
+        if (val!= d.getResistance() )
+            return false;
+
+    }
+    return true;
 }
 
 OrderedSet<Duck> readDucks(ifstream& inputFile, int N) {
@@ -77,7 +90,7 @@ void printLanes(const OrderedSet<Lane>& lanes) {
 
 int main() {
     int N, K;
-    ifstream inputFile("data.txt");
+    ifstream inputFile("../data.txt");
 
     if (!inputFile.is_open()) {
         cerr << "Error while opening file!" << endl;
@@ -89,8 +102,14 @@ int main() {
     OrderedSet<Duck> ducks = readDucks(inputFile, N);
     OrderedSet<Lane> lanes = readLanes(inputFile, K);
 
+
+
     printDucks(ducks);
     printLanes(lanes);
+    cout<<"\n";
+    if (all_resistances_all_eq(ducks, N)==true) {
+        cout<<task_2( N, K, ducks, lanes);
+    }
 
     inputFile.close();
 
