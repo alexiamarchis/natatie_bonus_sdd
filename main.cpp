@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 #include <fstream>
-#include "task1.h"
+
 #include "task4.h"
 //#include "task_2.h"
 using namespace std;
@@ -108,7 +108,7 @@ void optiuni()
 int main() {
     int N, K;
    
-    ifstream inputFile("C:/Users/Brigitte/Desktop/problema/problema/data.txt");
+    ifstream inputFile("../data.txt");
 
     if (!inputFile.is_open()) {
         cerr << "Error while opening file!" << endl;

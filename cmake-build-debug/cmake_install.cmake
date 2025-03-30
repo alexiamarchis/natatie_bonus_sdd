@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/HP/natatie_bonus_sdd
+# Install script for directory: D:/structuri_de_date/natatie_bonus_sdd
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -52,6 +52,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/Users/HP/natatie_bonus_sdd/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "D:/structuri_de_date/natatie_bonus_sdd/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

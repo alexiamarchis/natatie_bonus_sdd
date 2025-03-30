@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\natatie_bonus_sdd.dir/objects.a
+C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\ar.exe qc CMakeFiles\natatie_bonus_sdd.dir/objects.a @CMakeFiles\natatie_bonus_sdd.dir\objects1.rsp
+C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\natatie_bonus_sdd.dir/objects.a -Wl,--no-whole-archive -o natatie_bonus_sdd.exe -Wl,--out-implib,libnatatie_bonus_sdd.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\natatie_bonus_sdd.dir\linkLibs.rsp

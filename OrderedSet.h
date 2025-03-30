@@ -1,6 +1,6 @@
 #ifndef ORDEREDSET_H
 #define ORDEREDSET_H
-
+#include <iostream>
 template <typename T>
 using Comparator = bool(*)(const T&, const T&);
 
@@ -16,7 +16,7 @@ private:
     int search(const T& elem) const;
 
 public:
-    OrderedSet(int* arr, int size, int cap);
+    OrderedSet(T* arr, int size, int cap);
     OrderedSet();
     OrderedSet(Comparator<T> cmpFunction);
     OrderedSet(const OrderedSet& other);
@@ -65,7 +65,7 @@ int OrderedSet<T>::search(const T& elem) const {
 }
 
 template<typename T>
-OrderedSet<T>::OrderedSet(int* arr, int size, int cap) {
+OrderedSet<T>::OrderedSet(T* arr, int size, int cap) {
     this->capacity = cap;
     this->nrElems = size;
     this->elems = new T[capacity];
@@ -184,7 +184,7 @@ void OrderedSet<T>::setComparator(Comparator<T> newCmp) {
     for (int i = 0; i < this->nrElems - 1; i++) {
         for (int j = i + 1; j < this->nrElems; j++) {
             if (this->cmp(this->elems[j], this->elems[i])) {
-                swap(this->elems[i], this->elems[j]);
+                std::swap(this->elems[i], this->elems[j]);
             }
         }
     }
