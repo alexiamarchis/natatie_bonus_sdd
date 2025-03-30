@@ -7,6 +7,9 @@
 #include "pbr5_test.h"
 #include "pb_r5.h"
 #include "task4.h"
+#include "Subtask3.h"
+#include "Restriction1.h"
+#include  "Restriction6.h"
 using namespace std;
 
 bool compareDucks(const Duck& d1, const Duck& d2) {
@@ -137,45 +140,58 @@ int main() {
     OrderedSet<Lane> lanes7 = lanes;
     float sol = rezolvare_restrictie5(ducks7,lanes7,dkPos);
     cout << '\n' << "solutia este: "<< sol << '\n';
-    cout << '\n' << '\n';
     printDucks(dkPos);
-    cout << '\n' << '\n';
-    printDucks(ducks);
-    printLanes(lanes);
+    cout << '\n';
+
 
 ///
 ///-------------------------------------------------------------
 ///Ioana
 ///
+    OrderedSet<Duck> ducks2 = ducks;
+    OrderedSet<Lane> lanes2 = lanes;
     cout<<"\n";
-    if (all_resistances_all_eq(ducks, N)==true) {
-        cout<<task_2( N, K, ducks, lanes);
+    if (all_resistances_all_eq(ducks2, N)==true) {
+        cout<<task_2( N, K, ducks2, lanes2);
     }
-
+    cout<<"\n";
 ///
 ///-------------------------------------------------------------
 ///brigi
 ///
+    OrderedSet<Duck> ducks4 = ducks;
+    OrderedSet<Lane> lanes4 = lanes;
+
     cout << '\n';
     double timpi[1000] = { 0 };
-    ducks.setComparator(duckies);
-    double raspuns = cautare(N, K, ducks, lanes, timpi);
+    ducks4.setComparator(duckies);
+    double raspuns = cautare(N, K, ducks4, lanes4, timpi);
     cout << raspuns << " ";
     cout << '\n';
 ///
 ///-------------------------------------------------------------
 ///Miana
 ///
-#include "Restriction1.h"
-#include  "Restriction6.h"
+    cout<<"\n";
     // Restriction 1
     CheckSpeeds();
 
     // Restriction 6
-    cout << "Best time into natural number: " << bestNaturalTime(ducks, lanes) << endl;
+    OrderedSet<Duck> ducks16 = ducks;
+    OrderedSet<Lane> lanes16 = lanes;
+    cout << "Best time into natural number: " << bestNaturalTime(ducks16, lanes16) << endl;
+
 
 ///
 ///-------------------------------------------------------------
+///Diana
+
+    // Subtask 3
+    OrderedSet<Duck> ducks3 = ducks;
+    OrderedSet<Lane> lanes3 = lanes;
+    cout<<"\n";
+    cout << "best time= " << bestTime(ducks3, lanes3) << endl;
+    cout<<"\n";
 ///
     inputFile.close();
     return 0;

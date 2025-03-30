@@ -25,4 +25,6 @@ data.txt
         Restriction1.h
         Restriction1.cpp
         Restriction6.cpp
-        Restriction6.h)
+        Restriction6.h
+        Subtask3.cpp
+        Subtask3.h)

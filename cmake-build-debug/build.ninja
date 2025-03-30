@@ -119,6 +119,13 @@ build CMakeFiles/natatie_bonus_ssd.dir/Restriction6.cpp.obj: CXX_COMPILER__natat
   OBJECT_DIR = CMakeFiles\natatie_bonus_ssd.dir
   OBJECT_FILE_DIR = CMakeFiles\natatie_bonus_ssd.dir
 
+build CMakeFiles/natatie_bonus_ssd.dir/Subtask3.cpp.obj: CXX_COMPILER__natatie_bonus_ssd_unscanned_Debug D$:/structuri_de_date/natatie_bonus_sdd/Subtask3.cpp || cmake_object_order_depends_target_natatie_bonus_ssd
+  DEP_FILE = CMakeFiles\natatie_bonus_ssd.dir\Subtask3.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -ID:/structuri_de_date/natatie_bonus_sdd/.
+  OBJECT_DIR = CMakeFiles\natatie_bonus_ssd.dir
+  OBJECT_FILE_DIR = CMakeFiles\natatie_bonus_ssd.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target natatie_bonus_ssd
@@ -127,7 +134,7 @@ build CMakeFiles/natatie_bonus_ssd.dir/Restriction6.cpp.obj: CXX_COMPILER__natat
 #############################################
 # Link the executable natatie_bonus_ssd.exe
 
-build natatie_bonus_ssd.exe: CXX_EXECUTABLE_LINKER__natatie_bonus_ssd_Debug CMakeFiles/natatie_bonus_ssd.dir/Duck.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/Lane.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/main.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/OrderedSet.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/task_2.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/pb_r5.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/pbr5_test.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/task4.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/Restriction1.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/Restriction6.cpp.obj
+build natatie_bonus_ssd.exe: CXX_EXECUTABLE_LINKER__natatie_bonus_ssd_Debug CMakeFiles/natatie_bonus_ssd.dir/Duck.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/Lane.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/main.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/OrderedSet.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/task_2.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/pb_r5.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/pbr5_test.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/task4.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/Restriction1.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/Restriction6.cpp.obj CMakeFiles/natatie_bonus_ssd.dir/Subtask3.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\natatie_bonus_ssd.dir
