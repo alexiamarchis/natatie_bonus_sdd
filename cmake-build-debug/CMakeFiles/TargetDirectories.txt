@@ -1,0 +1,3 @@
+D:/structuri_de_date/natatie_bonus_sdd/cmake-build-debug/CMakeFiles/natatie_bonus_ssd.dir
+D:/structuri_de_date/natatie_bonus_sdd/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/structuri_de_date/natatie_bonus_sdd/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -74,10 +74,11 @@ void printLanes(const OrderedSet<Lane>& lanes) {
         cout << "Id: " << l.getId() << ", Length: " << l.getLength() << '\n';
     }
 }
-
+#include "pbr5_test.h"
+#include "pb_r5.h"
 int main() {
     int N, K;
-    ifstream inputFile("data.txt");
+    ifstream inputFile("../data.txt");
 
     if (!inputFile.is_open()) {
         cerr << "Error while opening file!" << endl;
@@ -89,8 +90,19 @@ int main() {
     OrderedSet<Duck> ducks = readDucks(inputFile, N);
     OrderedSet<Lane> lanes = readLanes(inputFile, K);
 
+///Alex
+    testCompFunc(); /// Alex
+    testRezEx(); /// Alex
+    OrderedSet<Duck> dkPos;
+    float sol = rezolvare_restrictie5(ducks,lanes,dkPos);
+    cout << '\n' << "solutia este: "<< sol << '\n';
+    cout << '\n' << '\n';
+    printDucks(dkPos);
+    cout << '\n' << '\n';
     printDucks(ducks);
     printLanes(lanes);
+
+///Alex
 
     inputFile.close();
 
