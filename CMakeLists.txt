@@ -19,4 +19,6 @@ add_executable( natatie_bonus_ssd
         pb_r5.cpp
         pbr5_test.h
         pbr5_test.cpp
-data.txt)
+data.txt
+        task4.cpp
+        task4.h)

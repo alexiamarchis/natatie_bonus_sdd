@@ -6,6 +6,7 @@
 #include "task_2.h"
 #include "pbr5_test.h"
 #include "pb_r5.h"
+#include "task4.h"
 using namespace std;
 
 bool compareDucks(const Duck& d1, const Duck& d2) {
@@ -103,7 +104,15 @@ void print_options()
 
 }
 
-
+bool duckies(const Duck& d1, const Duck& d2)
+{
+    if (d1.getResistance() > d2.getResistance())
+        return false;
+    else if (d1.getResistance() == d2.getResistance())
+        if (d1.getSpeed() > d2.getSpeed())
+            return false;
+    return true;
+}
 
 int main() {
     int N, K;
@@ -124,7 +133,9 @@ int main() {
     testCompFunc(); /// Alex
     testRezEx(); /// Alex
     OrderedSet<Duck> dkPos;
-    float sol = rezolvare_restrictie5(ducks,lanes,dkPos);
+    OrderedSet<Duck> ducks7 = ducks;
+    OrderedSet<Lane> lanes7 = lanes;
+    float sol = rezolvare_restrictie5(ducks7,lanes7,dkPos);
     cout << '\n' << "solutia este: "<< sol << '\n';
     cout << '\n' << '\n';
     printDucks(dkPos);
@@ -142,8 +153,18 @@ int main() {
     if (all_resistances_all_eq(ducks, N)==true) {
         cout<<task_2( N, K, ducks, lanes);
     }
-
-    inputFile.close();
 ///Ioana
+
+///brigi
+    cout << '\n';
+    double timpi[1000] = { 0 };
+    ducks.setComparator(duckies);
+    double raspuns = cautare(N, K, ducks, lanes, timpi);
+    cout << raspuns << " ";
+    cout << '\n';
+///brigi
+    inputFile.close();
+
+
     return 0;
 }
