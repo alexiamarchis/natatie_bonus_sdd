@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "natatie_bonus_ssd",
+					"name" : "natatie_bonus_sdd",
 					"targetIndexes" : 
 					[
 						0
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "natatie_bonus_ssd::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-natatie_bonus_ssd-Debug-85dbe8662303d5e39144.json",
+					"jsonFile" : "target-natatie_bonus_ssd-Debug-37164f34f6d3286a3b16.json",
 					"name" : "natatie_bonus_ssd",
 					"projectIndex" : 0
 				}

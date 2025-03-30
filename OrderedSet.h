@@ -186,6 +186,7 @@ void OrderedSet<T>::setComparator(Comparator<T> newCmp) {
         for (int j = i + 1; j < this->nrElems; j++) {
             if (this->cmp(this->elems[j], this->elems[i])) {
                 std::swap(this->elems[i], this->elems[j]);
+                ///Nu modificati std::swap-ul pt ca am pus Iostream sa functioneze in orice situatie
             }
         }
     }

@@ -3,7 +3,7 @@
 #include "OrderedSet.h"
 #include "Duck.h"
 #include "Lane.h"
-
+#include "task_2.h"
 using namespace std;
 
 bool compareDucks(const Duck& d1, const Duck& d2) {
@@ -16,6 +16,19 @@ bool compareLanes(const Lane& l1, const Lane& l2) {
     if (l1.getLength() != l2.getLength())
         return l1.getLength() < l2.getLength();
     return l1.getId() < l2.getId();
+}
+
+bool all_resistances_all_eq(const OrderedSet<Duck>& ds, int N) {
+
+    Duck d=ds.getElem(0);
+    int val=d.getResistance();
+    for (int i=1; i<N; i++ ) {
+        d=ds.getElem(i);
+        if (val!= d.getResistance() )
+            return false;
+
+    }
+    return true;
 }
 
 OrderedSet<Duck> readDucks(ifstream& inputFile, int N) {
@@ -74,8 +87,7 @@ void printLanes(const OrderedSet<Lane>& lanes) {
         cout << "Id: " << l.getId() << ", Length: " << l.getLength() << '\n';
     }
 }
-#include "pbr5_test.h"
-#include "pb_r5.h"
+
 int main() {
     int N, K;
     ifstream inputFile("../data.txt");
@@ -89,8 +101,9 @@ int main() {
 
     OrderedSet<Duck> ducks = readDucks(inputFile, N);
     OrderedSet<Lane> lanes = readLanes(inputFile, K);
-
 ///Alex
+#include "pbr5_test.h"
+#include "pb_r5.h"
     testCompFunc(); /// Alex
     testRezEx(); /// Alex
     OrderedSet<Duck> dkPos;
@@ -104,7 +117,16 @@ int main() {
 
 ///Alex
 
-    inputFile.close();
 
+   // printDucks(ducks);
+   // printLanes(lanes);
+///Ioana
+    cout<<"\n";
+    if (all_resistances_all_eq(ducks, N)==true) {
+        cout<<task_2( N, K, ducks, lanes);
+    }
+
+    inputFile.close();
+///Ioana
     return 0;
 }
