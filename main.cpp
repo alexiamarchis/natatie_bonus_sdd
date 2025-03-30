@@ -127,9 +127,9 @@ int main() {
 
     OrderedSet<Duck> ducks = readDucks(inputFile, N);
     OrderedSet<Lane> lanes = readLanes(inputFile, K);
-
+///-------------------------------------------------------------
 ///Alex
-
+///
     testCompFunc(); /// Alex
     testRezEx(); /// Alex
     OrderedSet<Duck> dkPos;
@@ -143,28 +143,40 @@ int main() {
     printDucks(ducks);
     printLanes(lanes);
 
-///Alex
-
-
-   // printDucks(ducks);
-   // printLanes(lanes);
+///
+///-------------------------------------------------------------
 ///Ioana
+///
     cout<<"\n";
     if (all_resistances_all_eq(ducks, N)==true) {
         cout<<task_2( N, K, ducks, lanes);
     }
-///Ioana
 
+///
+///-------------------------------------------------------------
 ///brigi
+///
     cout << '\n';
     double timpi[1000] = { 0 };
     ducks.setComparator(duckies);
     double raspuns = cautare(N, K, ducks, lanes, timpi);
     cout << raspuns << " ";
     cout << '\n';
-///brigi
+///
+///-------------------------------------------------------------
+///Miana
+///
+#include "Restriction1.h"
+#include  "Restriction6.h"
+    // Restriction 1
+    CheckSpeeds();
+
+    // Restriction 6
+    cout << "Best time into natural number: " << bestNaturalTime(ducks, lanes) << endl;
+
+///
+///-------------------------------------------------------------
+///
     inputFile.close();
-
-
     return 0;
 }
