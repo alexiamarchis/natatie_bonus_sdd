@@ -1,9 +1,8 @@
 ﻿#include <iostream>
 #include <fstream>
-#include "OrderedSet.h"
-#include "Duck.h"
-#include "Lane.h"
-#include "task_2.h"
+#include "task1.h"
+#include "task4.h"
+//#include "task_2.h"
 using namespace std;
 
 bool compareDucks(const Duck& d1, const Duck& d2) {
@@ -20,11 +19,11 @@ bool compareLanes(const Lane& l1, const Lane& l2) {
 
 bool all_resistances_all_eq(const OrderedSet<Duck>& ds, int N) {
 
-    Duck d=ds.getElem(0);
-    int val=d.getResistance();
-    for (int i=1; i<N; i++ ) {
-        d=ds.getElem(i);
-        if (val!= d.getResistance() )
+    Duck d = ds.getElem(0);
+    int val = d.getResistance();
+    for (int i = 1; i < N; i++) {
+        d = ds.getElem(i);
+        if (val != d.getResistance())
             return false;
 
     }
@@ -87,10 +86,29 @@ void printLanes(const OrderedSet<Lane>& lanes) {
         cout << "Id: " << l.getId() << ", Length: " << l.getLength() << '\n';
     }
 }
+bool duckies(const Duck& d1, const Duck& d2)
+{
+    if (d1.getResistance() > d2.getResistance())
+        return false;
+    else if (d1.getResistance() == d2.getResistance())
+        if (d1.getSpeed() > d2.getSpeed())
+            return false;
+    return true;
+}
+void optiuni()
+{
+    cout << "Task 1 :Vitezele tuturor rațelor sunt egale\n";
+    cout << "Task 2 :Nivelul de rezistență al tuturor rațelor este acelaşi.\n";
+    cout << "Task 3 :N-M=1\n";
+    cout << "Task 4 :1 ≤ M ≤ N ≤ 100 și nivelul de rezistenţă al raţei i are valoarea i, 1 ≤ i ≤ N\n";
+    cout << "Task 6 :Rezultatul este un număr natural\n";
+    cout << "Task 7 :Fără restricții suplimentare.\n";
 
+}
 int main() {
     int N, K;
-    ifstream inputFile("../data.txt");
+   
+    ifstream inputFile("C:/Users/Brigitte/Desktop/problema/problema/data.txt");
 
     if (!inputFile.is_open()) {
         cerr << "Error while opening file!" << endl;
@@ -98,20 +116,16 @@ int main() {
     }
 
     inputFile >> N >> K;
-
+    
     OrderedSet<Duck> ducks = readDucks(inputFile, N);
     OrderedSet<Lane> lanes = readLanes(inputFile, K);
 
 
-
-    printDucks(ducks);
-    printLanes(lanes);
-    cout<<"\n";
-    if (all_resistances_all_eq(ducks, N)==true) {
-        cout<<task_2( N, K, ducks, lanes);
-    }
-
-    inputFile.close();
+    double timpi[1000] = { 0 };
+    ducks.setComparator(duckies);
+    double raspuns = cautare(N, K, ducks, lanes, timpi);
+    cout << raspuns << " ";
+  
 
     return 0;
 }
