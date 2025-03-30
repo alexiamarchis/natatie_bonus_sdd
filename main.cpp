@@ -4,6 +4,8 @@
 #include "Duck.h"
 #include "Lane.h"
 #include "task_2.h"
+#include "pbr5_test.h"
+#include "pb_r5.h"
 using namespace std;
 
 bool compareDucks(const Duck& d1, const Duck& d2) {
@@ -88,6 +90,21 @@ void printLanes(const OrderedSet<Lane>& lanes) {
     }
 }
 
+
+void print_options()
+{
+    cout << "Task 1 :Vitezele tuturor rațelor sunt egale\n";
+    cout << "Task 2 :Nivelul de rezistență al tuturor rațelor este acelaşi.\n";
+    cout << "Task 3 :N-M=1\n";
+    cout << "Task 4 :1 ≤ M ≤ N ≤ 100 și nivelul de rezistenţă al raţei i are valoarea i, 1 ≤ i ≤ N\n";
+    cout << "Task 6 :Rezultatul este un număr natural\n";
+    cout << "Task 7 :Fără restricții suplimentare.\n";
+    cout << "     8 : Exit.\n";
+
+}
+
+
+
 int main() {
     int N, K;
     ifstream inputFile("../data.txt");
@@ -101,9 +118,9 @@ int main() {
 
     OrderedSet<Duck> ducks = readDucks(inputFile, N);
     OrderedSet<Lane> lanes = readLanes(inputFile, K);
+
 ///Alex
-#include "pbr5_test.h"
-#include "pb_r5.h"
+
     testCompFunc(); /// Alex
     testRezEx(); /// Alex
     OrderedSet<Duck> dkPos;
