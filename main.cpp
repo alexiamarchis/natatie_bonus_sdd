@@ -91,6 +91,13 @@ int main() {
 
     printDucks(ducks);
     printLanes(lanes);
+    print "\n";
+
+    // Restriction 1
+    CheckSpeeds();
+
+    // Restriction 6
+    cout << "Best time into natural number: " << bestNaturalTime(ducks, lanes) << endl;
 
     inputFile.close();
 

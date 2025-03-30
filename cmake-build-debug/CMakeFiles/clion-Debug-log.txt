@@ -1,0 +1,1 @@
+CMakeLists.txt not found in D:\UBB\Informatica\Structuri de date\natatie\natatie_bonus_sdd-main\natatie_bonus_sdd Select CMakeLists.txt
